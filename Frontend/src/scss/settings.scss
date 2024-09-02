@@ -1,0 +1,205 @@
+@import './colors';
+@import '~bootstrap/scss/bootstrap';
+
+.settings-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff; /* White background for the wrapper */
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px $box-shadow;
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: auto;
+
+  .back-button-container {
+    position: fixed; /* Position it relative to the viewport */
+    top: 20px; /* Distance from the top of the viewport */
+    left: 20px; /* Distance from the left of the viewport */
+    z-index: 1000; /* Ensure it is on top of other elements */
+    width: auto; /* Adjust width if needed; auto is usually sufficient */
+    width: 105%; /* 50% bigger than the about-us-page container */
+    max-width: calc(10% * 1.5); /* Ensure it does not exceed 105% of the about-us-page width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 10px; 
+
+
+    .goback-button {
+      font-size: 24px;
+      color: $button-colour;
+      cursor: pointer;
+      transition: color 0.3s;
+      
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+
+  .settings-page {
+    width: 100%;
+    max-width: 1200px; /* Set a max-width for better readability */
+    margin-top: 40px; /* Offset for back button */
+    background-color: #ffffff; /* White background for the settings page */
+    border-radius: 10px;/* Optional: Add a shadow if needed */
+
+    h1 {
+      text-align: center;
+      color: $heading-color;
+      margin-bottom: 20px;
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .section {
+      margin-bottom: 30px;
+      background-color: #ffffff !important;
+
+      // Specific styles for "Notification Preferences" section
+      &:nth-of-type(2) { // Target the second section
+        form {
+          display: flex;
+          flex-direction: column;
+          background-color: #ffffff !important; /* White background for form area */
+          padding: 20px; /* Add padding inside the form */
+
+          .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center; /* Align items vertically in the center */
+            gap: 10px; /* Add space between label and checkbox */
+            background-color: #ffffff; 
+            color: $text-color;
+            
+            label {
+              display: flex;
+              align-items: center;
+              font-size: $font-size-footer;
+              font-weight: 500;
+              color: $text-color;
+              margin-bottom: 0; /* Remove bottom margin from label */
+              width: auto; /* Ensure label width is auto */
+            }
+
+            input[type="checkbox"] {
+              margin-right: 10px; /* Add space between checkbox and label */
+            }
+          }
+
+          .btn-save {
+            padding: 12px 20px;
+            background-color: $button-colour;
+            color: $button-text-color;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-align: center;
+            width: 100%;
+            
+            &:hover {
+              background-color: $hover-color;
+            }
+          }
+        }
+      }
+    }
+
+    p {
+      font-size: 16px;
+      color: #333;
+    }
+
+    a {
+      color: $button-colour;
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .settings-page-wrapper {
+    width: 90%;
+  }
+
+  .settings-page {
+    margin-top: 40px; /* Adjust for mobile */
+    
+    h1 {
+      font-size: 24px;
+    }
+
+    .section h2 {
+      font-size: 20px;
+    }
+
+    .form-group input {
+      font-size: 14px;
+    }
+
+    .btn-save {
+      padding: 12px 20px;
+      background-color: $button-colour;
+      color: $button-text-color;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-align: center;
+      width: 100%;
+      
+      &:hover {
+        background-color: $hover-color;
+      }
+    }
+  }
+}
+
+.section1 {
+  background-color: white;
+  font-size: $font-size-base;
+
+  .form1 {
+    background-color: white;
+  }
+
+  .btn-save {
+    padding: 12px 20px;
+    background-color: $button-colour;
+    color: $button-text-color;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+
+  .input1 {
+    padding: 0px 10px;
+  }
+
+  label {
+    color: $text-color;
+    font-weight: 500;
+    font-size: $font-size-footer;
+  }
+}

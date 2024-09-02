@@ -1,0 +1,86 @@
+@import './colors';
+@import '~bootstrap/scss/bootstrap';
+
+.about-us-page {
+  padding: 30px;
+  background-color: $background-color;
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px $box-shadow;
+  height: auto;
+  width: 80%;
+  max-width: 1200px;
+  margin: 30px auto;
+  position: relative;
+
+  .back-button-container {
+    position: fixed; /* Position it relative to the viewport */
+    top: 20px; /* Distance from the top of the viewport */
+    left: 20px; /* Distance from the left of the viewport */
+    z-index: 1000; /* Ensure it is on top of other elements */
+    width: auto; /* Adjust width if needed; auto is usually sufficient */
+    width: 105%; /* 50% bigger than the about-us-page container */
+    max-width: calc(10% * 1.5); /* Ensure it does not exceed 105% of the about-us-page width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 10px; 
+
+
+    .goback-button {
+      font-size: 24px;
+      color: $button-colour;
+      cursor: pointer;
+      transition: color 0.3s;
+      
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+
+  h1 {
+    text-align: center;
+    color: $heading-color;
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-weight: 700;
+  }
+
+  .section {
+    margin-bottom: 30px;
+
+    h2 {
+      color: $heading-color;
+      margin-bottom: 15px;
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+
+      li {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .email-link {
+    color: $button-colour;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+      color: $hover-color;
+    }
+  }
+}

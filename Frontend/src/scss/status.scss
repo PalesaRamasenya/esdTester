@@ -1,0 +1,75 @@
+@import './colors';
+@import '~bootstrap/scss/bootstrap';
+
+/* status.scss */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: $background-color; /* Custom variable */
+}
+
+.back-button {
+    font-size: 24px;
+    color: $primary-color;
+    cursor: pointer;
+    margin: 20px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.status-heading {
+    text-align: center;
+    margin-top: 50px;
+
+    h1 {
+        font-size: $font-size-base;
+        color: $heading-color;
+    }
+}
+
+.report-details {
+    background-color: $section-background;
+    margin: 30px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    h2 {
+        font-size: 1.5rem;
+        color: $primary-color;
+        margin-bottom: 20px;
+    }
+
+    .p-status {
+        p {
+            font-size: $font-size-base;
+            color: $text-color;
+            margin-bottom: 10px;
+        }
+
+        p:last-child {
+            font-weight: bold;
+        }
+    }
+}
+
+.done-btn {
+    display: block;
+    padding: 10px 60px;
+    font-size: $font-size-small;
+    background-color: $button-colour;
+    color: $button-text-color;
+    border: 1px $button-colour;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration-line: none !important;
+
+    &:hover {
+        background-color: $hover-color;
+    }
+}
+
